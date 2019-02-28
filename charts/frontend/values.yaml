@@ -10,17 +10,17 @@ service:
   name: frontend
   type: ClusterIP
   externalPort: 80
-  internalPort: 8080
+  internalPort: 3000
   annotations:
-    fabric8.io/expose: "true"
-    fabric8.io/ingress.annotations: "kubernetes.io/ingress.class: nginx"
+    fabric8.io/expose: 'true'
+    fabric8.io/ingress.annotations: 'kubernetes.io/ingress.class: nginx'
 resources:
   limits:
-    cpu: 400m
-    memory: 256Mi
-  requests:
     cpu: 200m
     memory: 128Mi
+  requests:
+    cpu: 100m
+    memory: 64Mi
 probePath: /
 livenessProbe:
   initialDelaySeconds: 60
