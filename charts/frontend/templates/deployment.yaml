@@ -23,6 +23,9 @@ spec:
         imagePullPolicy: {{ .Values.image.pullPolicy }}
         ports:
         - containerPort: {{ .Values.service.internalPort }}
+        env:
+        - name: BACKEND_URL
+          value: http://backend
         livenessProbe:
           httpGet:
             path: {{ .Values.probePath }}
