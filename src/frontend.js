@@ -91,7 +91,7 @@ async function all(ctx) {
 
   let message = apiResponse.message || 'n/a'
 
-  ctx.body = `frontend: ${env.HOSTNAME}. backend: ${apiResponse.env.HOSTNAME}, message: ${message}`
+  ctx.body = `V2. frontend: ${env.HOSTNAME}. backend: ${apiResponse.env.HOSTNAME}, message: ${message}`
 }
 
 module.exports = app
